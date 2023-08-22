@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
 }
@@ -31,7 +34,7 @@ a {
 
 :root {
   --color-orange: #ff5c00;
-  --color-dark: #2a2a2a;
+  --color-dark: #000000;
 
   --body-bg: #fff;
   --text-color: var(--color-dark);
@@ -74,9 +77,9 @@ header {
   font-weight: bolder;
   margin-right: 1rem;
 }
-.line {
+/* .line {
   /* background: #000; */
-}
+/* } */
 
 .line::before {
   content: "";
@@ -130,7 +133,7 @@ header {
 }
 
 .hero {
-  grid-template-areas: left right;
+  grid-template-areas: "left right";
   background: var(--color-orange);
   padding: 0 2rem;
 }
@@ -264,8 +267,8 @@ header {
   padding-bottom: 2rem;
 }
 
-.project-card .top {
-}
+/* .project-card .top {
+} */
 
 .project-card .top img {
   width: 100%;
@@ -316,4 +319,113 @@ header {
 .my-bio .tag + div span:hover {
   cursor: pointer;
   background: rgb(30, 100, 190);
+}
+
+/* contact me */
+.contact {
+  margin-top: 3rem;
+  padding: 7rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.contact .social {
+  justify-content: space-around;
+  margin: 5rem;
+}
+
+.contact .social i {
+  font-size: 4rem;
+}
+
+.email {
+  background: var(--border-color);
+  color: var(--body-bg);
+  padding: 1rem 2rem;
+  width: 400px;
+  border-radius: 100px;
+  border: var(--body-bg);
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.email .send {
+  background: grey;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer section*/
+.footer {
+  background: rgb(53, 48, 48);
+  color: white;
+  /* padding: 3rem; */
+}
+
+.footer .top {
+  justify-content: center;
+  gap: 6rem;
+  padding-top: 3rem;
+}
+
+.footer .top ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.5rem;
+}
+
+.footer .buttom {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: black;
+}
+
+/* go-up buttom */
+
+.go-up {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: #ff5c00;
+  background: var(--body-bg);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    display: grid;
+    text-align: center;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    grid-template-areas: "right" "left";
+  }
+
+  .right img {
+    width: 100%;
+  }
+  .banner {
+    flex-direction: column;
+    text-align: center;
+
+    justify-content: center;
+  }
+  .banner .info-divider {
+    display: none;
+  }
+  .about-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
